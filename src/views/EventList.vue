@@ -7,7 +7,7 @@
 
 <script>
 import EventCard from '@/components/EventCard.vue'
-import axios from 'axios'
+import EventService from '@/services/EventService'
 
 export default {
   name: 'EventList',
@@ -20,8 +20,7 @@ export default {
     }
   },
   created() {
-    axios
-      .get('https://my-json-server.typicode.com/yk-port/real-vue-world/events')
+    EventService.getEvents()
       .then(response => {
         this.events = response.data
       })
