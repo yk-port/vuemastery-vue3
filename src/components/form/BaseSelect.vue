@@ -8,6 +8,7 @@
         $emit('updata:modelValue', $event.target.value)
       }
     }"
+    class="field"
   >
     <option
       v-for="option in options"
@@ -38,5 +39,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped></style>
